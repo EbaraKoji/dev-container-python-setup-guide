@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  app:
+    image: ebarakoji/dev-container-setup-guide:v1.0
+    build: 
+      context: ../
+      dockerfile: .devcontainer/Dockerfile
+    volumes:
+      - ../:/app/
+    command: sleep infinity

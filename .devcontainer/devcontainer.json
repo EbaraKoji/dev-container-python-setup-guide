@@ -1,0 +1,38 @@
+{
+  "name": "dev-container-python-setup-guide",
+  "dockerComposeFile": "docker-compose.yml",
+  "service": "app",
+  "workspaceFolder": "/app",
+  "features": {
+    "ghcr.io/devcontainers/features/github-cli:1.0.11": {}
+  },
+  "postCreateCommand": "pip install unify==0.5",
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "files.autoSave": "afterDelay",
+        "files.autoSaveDelay": 1000,
+        "extensions.ignoreRecommendations": true,
+        "python.defaultInterpreterPath": "/usr/local/bin/python",
+        "python.formatting.enableOnSave": true,
+        "notebook.formatOnSave.enabled": true,
+        "editor.defaultFormatter": "eeyore.yapf",
+        "yapf.args": ["--style", "{based_on_style: google}"],
+        "flake8.args": ["--max-line-length=80", "--ignore=E302,E305,E402"],
+        "editor.formatOnType": false,
+        "editor.codeActionsOnSave": {
+          "source.organizeImports": "always"
+        }
+      },
+      "extensions": [
+        "ms-python.python",
+        "ms-toolsai.jupyter",
+        "eeyore.yapf",
+        "ms-python.isort",
+        "lalten.vscode-unify",
+        "ms-python.flake8",
+        "ms-python.mypy-type-checker"
+      ]
+    }
+  }
+}
