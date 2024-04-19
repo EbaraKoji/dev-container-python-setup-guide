@@ -22,7 +22,8 @@
         "editor.formatOnType": false,
         "editor.codeActionsOnSave": {
           "source.organizeImports": "always"
-        }
+        },
+        "unify.path": "/home/vscode/.local/bin/unify"
       },
       "extensions": [
         "ms-python.python",
@@ -34,5 +35,7 @@
         "ms-python.mypy-type-checker"
       ]
     }
-  }
+  },
+  "remoteUser": "vscode",
+  "updateRemoteUserUID": true
 }
